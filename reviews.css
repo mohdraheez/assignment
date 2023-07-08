@@ -1,0 +1,46 @@
+#userreviews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.reviews{
+    width:80%;
+}
+
+.review_img{
+    width:20px;
+}
+
+.review_link{
+    text-decoration: none;
+    color:black;
+}
+
+.review_link > div{
+    display: flex;
+    align-items: center;
+}
+
+.star{
+    width: 20px;
+}
+
+.review_form{
+    display: flex;
+    flex-direction:column;
+    align-items: left;
+}
+
+.review_form > input{
+    padding: 5px;
+}
+
+.review{
+    background-color:rgb(201, 201, 201);
+    padding: 10px;
+}
+
+.username{
+    color:rgb(0, 140, 255);
+}

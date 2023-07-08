@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="login.js" async></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <Header>
+        <h1>
+            SMDB
+        </h1>
+        <nav>
+            <ul>
+                <!-- <a href="login.html"><li>Login</li></a> -->
+                <a href="signup.html"><li>Signup</li></a>
+            </ul>
+        </nav>
+    </Header>
+
+    <main class="login">
+        <div class="logindiv">
+            <form class="loginform" method="post" action="signin.php">
+                <h2>Login Now</h2>
+                <div>
+                    <label for="username">Email</label>
+                    <input type="text" name="username" id="username">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </div>
+                <input type="submit" value="Login" class="loginbtn">
+            </form>
+        </div>
+    </main>
+    <Footer>
+        <button>Sign in for more access</button>
+        <div>
+            <a href="">Get the SMDB App</a>
+            <a href="">Help</a>
+            <a href="">SMDB pro</a>
+            <a href="">Box office mojo</a>
+        </div>
+        <div>
+            <a href="">Condition of use</a>
+            <a href="">Privacy policy</a>
+        </div>
+        <h3>An Indian Company</h3>
+        <h4>&copy;2022-2023 by SMDB.com,Inc.</h4>
+    </Footer>
+</body>
+
+</html>

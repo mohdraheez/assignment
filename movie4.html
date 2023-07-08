@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reviews.css">
+    <title>Dungeons & Dragons: Honor Among Thieves</title>
+</head>
+
+<body>
+    <Header>
+        <h1>
+            SMDB
+        </h1>
+        <nav>
+            <ul>
+                <a href="login.html">
+                    <li class="login_btn">Login</li>
+                </a>
+                <a href="signup.html">
+                    <li class="signup_btn">Signup</li>
+                </a>
+                <li class="logout_btn">Logout</li>
+                <a href="about.html"><li>about</li></a>
+            </ul>
+        </nav>
+    </Header>
+
+    <main class="moviedetails">
+        <div class="content">
+            <div class="movietitle">
+                <h1>Dungeons & Dragons: Honor Among Thieves</h1>
+                <div>
+                    <div>
+                        <p>SMDB RATING</p>
+                        <p><span id="rating"></span>/10</p>
+                    </div>
+                    <div>
+                        <p>POPULARITY</p>
+                        <p>3</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movieimgdiv">
+                <img src="https://static.metacritic.com/images/products/movies/9/87cafaef5b310285c38bbf8d9c3131ea.jpg">
+                <iframe class="youtubevideo" src="https://www.youtube.com/embed/IiMinixSXII"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+
+            <div>
+                <table>
+                    <tr>
+                        <th colspan="2">Directors</th>
+                        <th colspan="3">Writers</th>
+                        <th colspan="3">Stars</th>
+                    </tr>
+                    <tr>
+                        <td>John Francis Daley</td>
+                        <td>Jonathan Goldstein</td>
+                        <td>Jonathan Goldstein</td>
+                        <td>John Francis Daley</td>
+                        <td>Michael Gilio</td>
+                        <td>Chris Pine</td>
+                        <td>Michelle Rodriguez</td>
+                        <td>Regé-Jean Page</td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+    <div id="userreviews">
+        <div class="reviews">
+            <h2>User Reviews</h2>
+            <div class="user_review">
+                <form class="review_form" method="post" action="user_review.php">
+                    <h2 name="" id="title">Dungeons & Dragons: Honor Among Thieves</h2>
+                    <input type="hidden" name="movietitle" id="movietitle"
+                        value="Dungeons & Dragons: Honor Among Thieves">
+                    <div>
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <img src="star.png" alt="" class="star">
+                        <span name="count" id="count">0</span>
+                        <input type="hidden" name="count2" id="count2" value="0">
+                    </div>
+                    <input type="text" placeholder="Title" name="title" id="title">
+                    <input type="text" placeholder="Description" name="description" id="description" maxlength="150">
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <Footer>
+        <button>Sign in for more access</button>
+        <div>
+            <a href="">Get the SMDB App</a>
+            <a href="">Help</a>
+            <a href="">SMDB pro</a>
+            <a href="">Box office mojo</a>
+        </div>
+        <div>
+            <a href="">Condition of use</a>
+            <a href="">Privacy policy</a>
+        </div>
+        <h3>An Indian Company</h3>
+        <h4>&copy;2022-2023 by SMDB.com,Inc.</h4>
+    </Footer>
+    <script src="index.js"></script>
+    <script>
+        var xhr = new XMLHttpRequest();
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById("content").innerHTML = xhr.responseText;
+            }
+        };
+        var parameterValue = document.getElementById('title').innerText;
+        xhr.open("GET", "all_review.php?parameter=" + encodeURIComponent(parameterValue), true);
+        xhr.send();
+        var xhr2 = new XMLHttpRequest();
+
+        xhr2.onreadystatechange = function () {
+            if (xhr2.readyState === 4 && xhr2.status === 200) {
+                document.getElementById("rating").innerHTML = xhr2.responseText;
+            }
+        };
+
+        xhr2.open("GET", "getRatingcount.php?parameter=" + encodeURIComponent(parameterValue), true);
+        xhr2.send();
+    </script>
+
+</body>
+
+</html>

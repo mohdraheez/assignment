@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+Header{
+    display:flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: black;
+    color:white;
+}
+header>h1{
+    padding-left: 1%;
+}
+
+nav{
+    display:block;
+    width:25%;
+}
+ul{
+    display: flex;
+    list-style-type:none;
+    justify-content: space-evenly;
+}
+Header>form>input{
+    padding:4%;
+    width: 200%;
+    outline:none;
+}
+
+.movieimg{
+    width: 200px;
+    height: 300px;
+    transition: .3s;
+}
+
+.movieimg:hover{
+    width: 300px;
+    height: 400px;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.mainInnerDiv{
+    width: 80%;
+    padding: 1%;
+    margin-top: 10px;
+    border: 1px solid black;
+}
+
+.movielist{
+    display:flex;
+    flex-direction: row;
+}
+
+.movielist div{
+    position: relative;
+    width:100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+Footer{
+    margin-top: 10px;
+    background-color: black;
+    color:white;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+Footer>button,.loginbtn{
+    padding: .5%;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: rgb(255, 242, 0);
+    border: transparent;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+.moviedetails {
+    min-height: 100vh;
+    display: flex;
+    justify-content:center;
+}
+
+.content{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top:20px;
+    width:80%;
+}
+
+.movietitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.movietitle>div{
+    display: flex;
+}
+
+.movietitle >div>div{
+    margin-right: 10px;
+}
+
+.movieimgdiv{
+    margin-top: 20px;
+    display: flex;
+}
+.movieimgdiv>img{
+    width:30%;
+}
+.youtubevideo{
+    width:70%;
+}
+
+
+table{
+    margin-top: 30px;
+    width:100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td,th{
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.login{
+    min-height: 90vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.logindiv{
+    width: 50%;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.loginform{
+    display: flex;
+    width: 50%;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.loginform>div{
+    display:flex;
+    width: 100%;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.loginform>div>input{
+    width: 60%;
+    height:30px;
+}
+
+.loginbtn{
+    height: 30px;
+}
+
